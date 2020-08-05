@@ -62,7 +62,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/mobxjs/mobx/edit/master/docs/refguide/observer-component.md" target="_blank" rel="noreferrer noopener">Edit</a></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="observer"></a><a href="#observer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>@observer</h1>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/mobxjs/mobx/edit/master/docs/refguide/observer-component.md" target="_blank" rel="noreferrer noopener">Edit</a></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="observer"></a><a href="#observer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>@observer</h1>
 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBD4KQ7&placement=mobxjsorg" id="_carbonads_js"></script>
 <p><details>
 <summary style="color: white; background:green;padding:5px;margin:5px;border-radius:2px">egghead.io lesson 1: observable &amp; observer</summary>
@@ -103,8 +103,8 @@ setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt
     }
 }
 
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Timer</span> <span class="hljs-attr">timerData</span>=<span class="hljs-string">{timerData}</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.body)
-</code></pre>
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Timer</span> <span class="hljs-attr">timerData</span>=<span class="hljs-string">{timerData}</span> /&gt;</span>, document.body)
+</span></code></pre>
 <p>Because <code>observer</code> automatically tracks any observables that are used (and none more), the <code>Timer</code> component above will automatically re-render whenever <code>timerData.secondsPassed</code> is updated, since it is declared as an observable.</p>
 <p>Note that <code>observer</code> <em>only</em> subscribes to observables used during the <em>own</em> render of the component. So if observables are passed to child components, those have to be marked as <code>observer</code> as well. This also holds for any callback based components.</p>
 <h2><a class="anchor" aria-hidden="true" id="observer-listens-to-_any_-observables-used"></a><a href="#observer-listens-to-_any_-observables-used" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>observer</code> listens to <em>any</em> observables used</h2>
@@ -214,8 +214,8 @@ otherwise it might do nothing at all.</p>
 <p>MobX can do a lot, but it cannot make primitive values observable (although it can wrap them in an object see <a href="/refguide/boxed.html">boxed observables</a>).
 So not the <em>values</em> that are observable, but the <em>properties</em> of an object. This means that <code>@observer</code> actually reacts to the fact that you dereference a value.
 So in our above example, the <code>Timer</code> component would <strong>not</strong> react if it was initialized as follows:</p>
-<pre><code class="hljs css language-javascript">React.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Timer</span> <span class="hljs-attr">timerData</span>=<span class="hljs-string">{timerData.secondsPassed}</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.body)
-</code></pre>
+<pre><code class="hljs css language-javascript">React.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Timer</span> <span class="hljs-attr">timerData</span>=<span class="hljs-string">{timerData.secondsPassed}</span> /&gt;</span>, document.body)
+</span></code></pre>
 <p>In this snippet just the current value of <code>secondsPassed</code> is passed to the <code>Timer</code>, which is the immutable value <code>0</code> (all primitives are immutable in JS).
 That number won't change anymore in the future, so <code>Timer</code> will never update. It is the property <code>secondsPassed</code> that will change in the future,
 so we need to access it <em>inside</em> the component. One could also say: values need to be passed <em>by reference</em> and not by value.</p>

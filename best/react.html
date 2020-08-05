@@ -62,7 +62,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/mobxjs/mobx/edit/master/docs/best/react.md" target="_blank" rel="noreferrer noopener">Edit</a></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="what-does-mobx-react-to"></a><a href="#what-does-mobx-react-to" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What does MobX react to?</h1>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/mobxjs/mobx/edit/master/docs/best/react.md" target="_blank" rel="noreferrer noopener">Edit</a></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="what-does-mobx-react-to"></a><a href="#what-does-mobx-react-to" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What does MobX react to?</h1>
 <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBD4KQ7&placement=mobxjsorg" id="_carbonads_js"></script>
 <p>MobX usually reacts to exactly the things you expect it to.
 Which means that in 90% of your use cases mobx &quot;just works&quot;.
@@ -267,12 +267,12 @@ twitterUrls.set(<span class="hljs-string">"Sara"</span>, <span class="hljs-strin
 Note that this will initially print <code>undefined</code>.
 You can check for the existence of an entry first by using <code>twitterUrls.has(&quot;Sara&quot;)</code>.
 So for dynamically keyed collections, always use observable maps.</p>
-<h4><a class="anchor" aria-hidden="true" id="correct-using-mobx-utilities-to-read--write-to-objects"></a><a href="#correct-using-mobx-utilities-to-read--write-to-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Correct: using MobX utilities to read / write to objects</h4>
+<h4><a class="anchor" aria-hidden="true" id="correct-using-mobx-utilities-to-read-write-to-objects"></a><a href="#correct-using-mobx-utilities-to-read-write-to-objects" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Correct: using MobX utilities to read / write to objects</h4>
 <p>Since MobX 4 it is also possible to use observable objects as dynamic collection, if they are read / updated by using the mobx apis, so that mobx can keep track of the property changes. The following will react as well:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>, observable } from "mobx"
 
 const twitterUrls = observable.object({
-    <span class="hljs-attr">John</span>: <span class="hljs-string">"twitter.com/johnny"</span>,
+    John: <span class="hljs-string">"twitter.com/johnny"</span>,
 })
 
 autorun(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
@@ -307,33 +307,33 @@ In general this is quite obvious and rarely causes issues.</p>
 but in practice is actually rendered out by a different component. This often happens when render callbacks of components are passed in first class to another component.</p>
 <p>Take for example the following contrived example:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> MyComponent = observer(<span class="hljs-function">(<span class="hljs-params">{ message }</span>) =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeContainer</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{()</span> =&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{message.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>} /&gt;</span>
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeContainer</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{()</span> =&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{message.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>} /&gt;
 ))
 
-message.title = <span class="hljs-string">"Bar"</span>
-</code></pre>
+message.title = "Bar"
+</span></code></pre>
 <p>At first glance everything might seem ok here, except that the <code>&lt;div&gt;</code> is actually not rendered by <code>MyComponent</code> (which has a tracked rendering), but by <code>SomeContainer</code>.
 So to make sure that the title of <code>SomeContainer</code> correctly reacts to a new <code>message.title</code>, <code>SomeContainer</code> should be an <code>observer</code> as well.</p>
 <p>If <code>SomeContainer</code> comes from an external lib, this is often not under your own control. In that case you can address this by either wrapping the <code>div</code> in its own stateless <code>observer</code> based component, or by leveraging the <code>&lt;Observer&gt;</code> component:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> MyComponent = observer(<span class="hljs-function">(<span class="hljs-params">{ message }</span>) =&gt;</span>
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeContainer</span>
-        <span class="hljs-attr">title</span> = <span class="hljs-string">{()</span> =&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">TitleRenderer</span> <span class="hljs-attr">message</span>=<span class="hljs-string">{message}</span> /&gt;</span>}
-    /&gt;</span>
+    &lt;SomeContainer
+        title = {() =&gt; &lt;TitleRenderer message={message} /&gt;}
+    /&gt;
 )
 
-<span class="hljs-keyword">const</span> TitleRenderer = observer(<span class="hljs-function">(<span class="hljs-params">{ message }</span>) =&gt;</span>
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{message.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>}
+const TitleRenderer = observer(({ message }) =&gt;
+    &lt;div&gt;{message.title}&lt;/div&gt;}
 )
 
-message.title = <span class="hljs-string">"Bar"</span>
+message.title = "Bar"
 </code></pre>
 <p>Alternatively, to avoid creating additional components, it is also possible to use the mobx-react built-in <code>Observer</code> component, which takes no arguments, and a single render function as children:</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> MyComponent = <span class="hljs-function">(<span class="hljs-params">{ message }</span>) =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeContainer</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{()</span> =&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">Observer</span>&gt;</span>{() =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{message.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-name">Observer</span>&gt;</span>} /&gt;</span>
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeContainer</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{()</span> =&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">Observer</span>&gt;</span>{() =&gt; <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{message.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>}<span class="hljs-tag">&lt;/<span class="hljs-name">Observer</span>&gt;</span>} /&gt;
 )
 
-message.title = <span class="hljs-string">"Bar"</span>
-</code></pre>
+message.title = "Bar"
+</span></code></pre>
 <h2><a class="anchor" aria-hidden="true" id="avoid-caching-observables-in-local-fields"></a><a href="#avoid-caching-observables-in-local-fields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Avoid caching observables in local fields</h2>
 <p>A common mistake is to store local variables that dereference observables, and then expect components to react. For example:</p>
 <pre><code class="hljs css language-javascript">@observer
@@ -362,21 +362,21 @@ This can simply be solved by doing the dereferencing inside <code>render()</code
 <h2><a class="anchor" aria-hidden="true" id="how-multiple-components-will-render"></a><a href="#how-multiple-components-will-render" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How multiple components will render</h2>
 <p>Suppose that the following components are used to render our above <code>message</code> object.</p>
 <pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> Message = observer(<span class="hljs-function">(<span class="hljs-params">{ message }</span>) =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    &lt;div&gt;
         {message.title}
-        <span class="hljs-tag">&lt;<span class="hljs-name">Author</span> <span class="hljs-attr">author</span>=<span class="hljs-string">{message.author}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">Likes</span> <span class="hljs-attr">likes</span>=<span class="hljs-string">{message.likes}</span> /&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+        &lt;Author author={message.author} /&gt;
+        &lt;Likes likes={message.likes} /&gt;
+    &lt;/div&gt;
 ))
 
-<span class="hljs-keyword">const</span> Author = observer(<span class="hljs-function">(<span class="hljs-params">{ author }</span>) =&gt;</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{author.name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>)
+const Author = observer(({ author }) =&gt; &lt;span&gt;{author.name}&lt;/span&gt;)
 
-<span class="hljs-keyword">const</span> Likes = observer(<span class="hljs-function">(<span class="hljs-params">{ likes }</span>) =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+const Likes = observer(({ likes }) =&gt; (
+    &lt;ul&gt;
         {likes.map((like) =&gt; (
-            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{like}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            &lt;li&gt;{like}&lt;/li&gt;
         ))}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
+    &lt;/ul&gt;
 ))
 </code></pre>
 <table>
@@ -395,8 +395,8 @@ This can simply be solved by doing the dereferencing inside <code>render()</code
 <li>* If the <code>Author</code> component was invoked like: <code>&lt;Author author={ message.author.name} /&gt;</code>. Then <code>Message</code> would be the dereferencing component and react to changes to <code>message.author.name</code>. Nonetheless <code>&lt;Author&gt;</code> would rerender as well, because it receives a new value. So performance wise it is best to dereference as late as possible.</li>
 <li>** If likes were objects instead of strings, and if they were rendered by their own <code>Like</code> component, the <code>Likes</code> component would not rerender for changes happening inside a specific like.</li>
 </ol>
-<h2><a class="anchor" aria-hidden="true" id="tldr"></a><a href="#tldr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TL;DR</h2>
+<h2><a class="anchor" aria-hidden="true" id="tl-dr"></a><a href="#tl-dr" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>TL;DR</h2>
 <blockquote>
 <p>MobX reacts to any <em>existing</em> <strong>observable</strong> <em>property</em> that is read during the execution of a tracked function.</p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/refguide/reaction.html"><span class="arrow-prev">← </span><span>reaction</span></a><a class="docs-next button" href="/refguide/action.html"><span>action</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#mobx-tracks-property-access-not-values">MobX tracks property access, not values</a></li><li><a href="#examples">Examples</a></li><li><a href="#mobx-only-tracks-synchronously-accessed-data">MobX only tracks synchronously accessed data</a></li><li><a href="#mobx-only-tracks-data-accessed-for-observer-components-if-they-are-directly-accessed-by-render">MobX only tracks data accessed for <code>observer</code> components if they are directly accessed by <code>render</code></a></li><li><a href="#avoid-caching-observables-in-local-fields">Avoid caching observables in local fields</a></li><li><a href="#how-multiple-components-will-render">How multiple components will render</a></li><li><a href="#tldr">TL;DR</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/mobx.png" alt="MobX" width="66" height="58"/></a><div><h5>Docs</h5><a href="/README#introduction">Why MobX</a><a href="/intro/concepts">Concepts</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/mobx" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://gitter.im/mobxjs/mobx">Project Chat</a></div><div><h5>More</h5><a class="github-button" href="https://github.com/mobxjs/mobx" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/refguide/reaction.html"><span class="arrow-prev">← </span><span>reaction</span></a><a class="docs-next button" href="/refguide/action.html"><span>action</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#mobx-tracks-property-access-not-values">MobX tracks property access, not values</a></li><li><a href="#examples">Examples</a></li><li><a href="#mobx-only-tracks-synchronously-accessed-data">MobX only tracks synchronously accessed data</a></li><li><a href="#mobx-only-tracks-data-accessed-for-observer-components-if-they-are-directly-accessed-by-render">MobX only tracks data accessed for <code>observer</code> components if they are directly accessed by <code>render</code></a></li><li><a href="#avoid-caching-observables-in-local-fields">Avoid caching observables in local fields</a></li><li><a href="#how-multiple-components-will-render">How multiple components will render</a></li><li><a href="#tl-dr">TL;DR</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/mobx.png" alt="MobX" width="66" height="58"/></a><div><h5>Docs</h5><a href="/README#introduction">Why MobX</a><a href="/intro/concepts">Concepts</a></div><div><h5>Community</h5><a href="https://stackoverflow.com/questions/tagged/mobx" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://gitter.im/mobxjs/mobx">Project Chat</a></div><div><h5>More</h5><a class="github-button" href="https://github.com/mobxjs/mobx" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>

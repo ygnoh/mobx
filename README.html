@@ -62,7 +62,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/mobxjs/mobx/edit/master/docs/README.md" target="_blank" rel="noreferrer noopener">Edit</a></header><article><div><span><p><img src="assets/mobx.png" alt="logo" height="120" align="right" /></p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/mobxjs/mobx/edit/master/docs/README.md" target="_blank" rel="noreferrer noopener">Edit</a></header><article><div><span><p><img src="assets/mobx.png" alt="logo" height="120" align="right" /></p>
 <h1><a class="anchor" aria-hidden="true" id="mobx"></a><a href="#mobx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MobX</h1>
 <p><em>Simple, scalable state management</em></p>
 <p><a href="https://travis-ci.org/mobxjs/mobx"><img src="https://travis-ci.org/mobxjs/mobx.svg?branch=master" alt="Build Status"></a>
@@ -197,31 +197,31 @@ In short, reactions bridge <a href="https://en.wikipedia.org/wiki/Reactive_progr
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TodoListView</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
     render() {
         <span class="hljs-keyword">return</span> (
-            <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            &lt;div&gt;
+                &lt;ul&gt;
                     {this.props.todoList.todos.map((todo) =&gt; (
-                        <span class="hljs-tag">&lt;<span class="hljs-name">TodoView</span> <span class="hljs-attr">todo</span>=<span class="hljs-string">{todo}</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{todo.id}</span> /&gt;</span>
+                        &lt;TodoView todo={todo} key={todo.id} /&gt;
                     ))}
-                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                &lt;/ul&gt;
                 Tasks left: {this.props.todoList.unfinishedTodoCount}
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+            &lt;/div&gt;
         )
     }
 }
 
-<span class="hljs-keyword">const</span> TodoView = observer(<span class="hljs-function">(<span class="hljs-params">{ todo }</span>) =&gt;</span> (
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
-            <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>
-            <span class="hljs-attr">checked</span>=<span class="hljs-string">{todo.finished}</span>
-            <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> (todo.finished = !todo.finished)}
+const TodoView = observer(({ todo }) =&gt; (
+    &lt;li&gt;
+        &lt;input
+            type="checkbox"
+            checked={todo.finished}
+            onClick={() =&gt; (todo.finished = !todo.finished)}
         /&gt;
         {todo.title}
-    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>
+    &lt;/li&gt;
 ))
 
-<span class="hljs-keyword">const</span> store = <span class="hljs-keyword">new</span> TodoList()
-ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TodoListView</span> <span class="hljs-attr">todoList</span>=<span class="hljs-string">{store}</span> /&gt;</span></span>, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"mount"</span>))
+const store = new TodoList()
+ReactDOM.render(&lt;TodoListView todoList={store} /&gt;, document.getElementById("mount"))
 </code></pre>
 <p><code>observer</code> turns React (function) components into derivations of the data they render.
 When using MobX there are no smart or dumb components.
